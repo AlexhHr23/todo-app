@@ -1,6 +1,8 @@
 import { Todo } from '../models/todo.model'
 import { createTodoHTML } from './';
 
+let element;
+
 /**
  * 
  * @param {String} elemenId 
@@ -8,8 +10,12 @@ import { createTodoHTML } from './';
  */
 export const renderTodos = ( elemenId, todos = []) => {
 
-    //Todo: referencia
-    const element = document.querySelector( elemenId );
+    if(!element)
+        element = document.querySelector( elemenId );
+
+    if( !element) throw new Error(`Element ${ elementId } not found`);
+
+    element.innerHTML = '';
 
     todos.forEach(todo => {
         element.append(createTodoHTML(todo));
