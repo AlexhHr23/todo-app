@@ -8,10 +8,10 @@ let element;
  * @param {String} elemenId 
  * @param {Todo} todo 
  */
-export const renderTodos = ( elemenId, todos = []) => {
+export const renderTodos = ( elementId, todos = []) => {
 
     if(!element)
-        element = document.querySelector( elemenId );
+        element = document.querySelector( elementId );
 
     if( !element) throw new Error(`Element ${ elementId } not found`);
 
@@ -19,6 +19,6 @@ export const renderTodos = ( elemenId, todos = []) => {
 
     todos.forEach(todo => {
         element.append(createTodoHTML(todo));
-    })
+    });
 
 }

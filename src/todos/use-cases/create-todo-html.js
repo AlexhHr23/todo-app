@@ -12,7 +12,7 @@ export const createTodoHTML = ( todo ) => {
 
     const html = ` 
                 <div class="view">
-                    <input class="toggle" type="checkbox" ${ done ? 'checked' : ''}>
+                    <input class="toggle" type="checkbox" ${ done ? 'checked': '' }>
                     <label>${ description }</label>
                     <button class="destroy"></button>
                 </div>
@@ -24,7 +24,7 @@ export const createTodoHTML = ( todo ) => {
     liElement.setAttribute('data-id', id);
     
     if(todo.done)
-    liElement.classList.add('completed');
+        liElement.classList.add('completed');
 
     return liElement;
 }
