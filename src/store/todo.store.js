@@ -3,7 +3,7 @@ import { Todo } from '../todos/models/todo.model';
 export const Filters = {
     All: 'all',
     Completed: 'Completed',
-    Pending: 'Pending'
+    Pending: 'Pending',
 }
 
 const state = {
